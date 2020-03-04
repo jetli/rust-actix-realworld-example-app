@@ -1,5 +1,5 @@
-# rust-actix-realworld-example-app
-Exemplary real world app built with Rust + Actix + Diesel
+# rust-realworld-example-app
+Exemplary real world app built with Rust + Actix/Hyper/Warp/Tide/Rocket/Roa/Rweb + Diesel/SQLx
 
 ## Alternatives
 - https://github.com/colinbankier/realworld-tide
