@@ -1,5 +1,5 @@
 [package]
-name = "conduit-actix"
+name = "conduit-actix-web"
 version = "0.1.0"
 authors = ["Jet Li <jing.i.qin@icloud.com>"]
 edition = "2018"
