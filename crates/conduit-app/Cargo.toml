@@ -7,3 +7,28 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+conduit-actix-web = { path = "../conduit-actix-web", version = "0.1.0", optional=true }
+conduit-diesel = { path = "../conduit-diesel", version = "0.1.0", optional=true }
+conduit-hyper = { path = "../conduit-hyper", version = "0.1.0", optional=true }
+conduit-primitives = { path = "../conduit-primitives", version = "0.1.0" }
+conduit-roa = { path = "../conduit-roa", version = "0.1.0", optional=true }
+conduit-rocket = { path = "../conduit-rocket", version = "0.1.0", optional=true }
+conduit-rweb = { path = "../conduit-rweb", version = "0.1.0", optional=true }
+conduit-sqlx = { path = "../conduit-sqlx", version = "0.1.0", optional=true }
+conduit-tide = { path = "../conduit-tide", version = "0.1.0", optional=true }
+conduit-warp = { path = "../conduit-warp", version = "0.1.0", optional=true }
+
+[features]
+default = ["actix_web", "diesel"]
+actix_web = ["conduit-actix-web"]
+diesel = ["conduit-diesel"]
+hyper = ["conduit-hyper"]
+roa = ["conduit-roa"]
+rocket = ["conduit-rocket"]
+rweb = ["conduit-rweb"]
+sqlx = ["conduit-sqlx"]
+tide = ["conduit-tide"]
+warp = ["conduit-warp"]
+
+
+
