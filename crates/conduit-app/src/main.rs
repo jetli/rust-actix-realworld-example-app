@@ -14,6 +14,13 @@ cfg_if! {
     }
 }
 
+cfg_if! {
+    if #[cfg(feature = "warp")] {
+        use conduit_warp::start_app;
+        use tokio::main as runtime;
+    }
+}
+
 #[runtime]
 async fn main() -> std::io::Result<()> {
     start_app().await

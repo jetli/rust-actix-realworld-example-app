@@ -10,6 +10,7 @@ edition = "2018"
 actix-rt = { version = "1", optional = true }
 async-std = { version = "1.5.0", features = ["attributes"], optional = true }
 cfg-if = "0.1"
+tokio = { version = "0.2", features = ["macros"], optional = true }
 
 conduit-actix-web = { path = "../conduit-actix-web", version = "0.1.0", optional = true }
 conduit-diesel = { path = "../conduit-diesel", version = "0.1.0", optional = true }
@@ -32,7 +33,7 @@ rocket = ["conduit-rocket"]
 rweb = ["conduit-rweb"]
 sqlx = ["conduit-sqlx"]
 tide = ["conduit-tide", "async-std"]
-warp = ["conduit-warp"]
+warp = ["conduit-warp", "tokio"]
 
 
 
