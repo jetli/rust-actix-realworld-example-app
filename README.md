@@ -1,6 +1,11 @@
 # rust-realworld-example-app
 Exemplary real world app built with Rust + Actix/Hyper/Warp/Tide/Rocket/Roa/Rweb + Diesel/SQLx
 
+## Getting started
+```bash
+cargo run
+```
+
 ## Web frameworks
 - https://github.com/actix/actix-web
 - https://github.com/hyperium/hyper

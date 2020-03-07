@@ -2,7 +2,7 @@ use actix_web::{get, App, HttpServer, Responder};
 
 #[get("/")]
 async fn index() -> impl Responder {
-    format!("Hello world")
+    String::from("Hello world from actix web")
 }
 
 pub async fn start_app() -> std::io::Result<()> {

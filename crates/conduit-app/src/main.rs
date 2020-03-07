@@ -1,8 +1,20 @@
-#[cfg(feature = "actix_web")]
-use conduit_actix_web::start_app;
+use cfg_if::cfg_if;
 
-#[cfg(feature = "actix_web")]
-#[actix_rt::main]
+cfg_if! {
+    if #[cfg(feature = "actix_web")] {
+        use conduit_actix_web::start_app;
+        use actix_rt::main as runtime;
+    }
+}
+
+cfg_if! {
+    if #[cfg(feature = "tide")] {
+        use conduit_tide::start_app;
+        use async_std::main as runtime;
+    }
+}
+
+#[runtime]
 async fn main() -> std::io::Result<()> {
     start_app().await
 }
