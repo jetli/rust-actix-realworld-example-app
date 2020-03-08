@@ -1,7 +1,16 @@
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
+use roa::preload::*;
+use roa::{App, Context, Result};
+
+async fn index(mut ctx: Context<()>) -> Result {
+    ctx.resp_mut().write("Hello world from roa");
+    Ok(())
+}
+
+pub async fn start_app() -> std::io::Result<()> {
+    let mut app = App::new(());
+    app.end(index);
+    if let Err(err) = app.listen("127.0.0.1:8080", |_| {})?.await {
+        eprintln!("Server error: {}", err);
     }
+    Ok(())
 }

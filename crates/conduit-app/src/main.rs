@@ -28,6 +28,13 @@ cfg_if! {
     }
 }
 
+cfg_if! {
+    if #[cfg(feature = "roa")] {
+        use conduit_roa::start_app;
+        use async_std::main as runtime;
+    }
+}
+
 #[runtime]
 async fn main() -> std::io::Result<()> {
     start_app().await
