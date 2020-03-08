@@ -21,6 +21,13 @@ cfg_if! {
     }
 }
 
+cfg_if! {
+    if #[cfg(feature = "hyper")] {
+        use conduit_hyper::start_app;
+        use tokio::main as runtime;
+    }
+}
+
 #[runtime]
 async fn main() -> std::io::Result<()> {
     start_app().await

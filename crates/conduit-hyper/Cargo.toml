@@ -8,3 +8,4 @@ edition = "2018"
 
 [dependencies]
 conduit-primitives = { path = "../conduit-primitives", version = "0.1.0" }
+hyper = "0.13"

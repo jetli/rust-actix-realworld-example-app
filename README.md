@@ -24,3 +24,6 @@ cargo run
 - https://github.com/fairingrey/actix-realworld-example-app
 - https://github.com/gothinkster/rust-realworld-example-app
 - https://github.com/cjbassi/rust-warp-realworld-backend
+
+## Resources
+- https://www.techempower.com/benchmarks/
