@@ -1,5 +1,5 @@
 # rust-realworld-example-app
-Exemplary real world app built with Rust + Actix/Hyper/Warp/Tide/Roa/Rweb + Diesel/SQLx
+Exemplary real world app built with Rust + Actix/Hyper/Warp/Tide/Roa + Diesel/SQLx
 
 ## Getting started
 ```bash
@@ -12,7 +12,6 @@ cargo run
 - https://github.com/seanmonstar/warp
 - https://github.com/http-rs/tide
 - https://github.com/Hexilee/roa
-- https://github.com/kdy1/rweb
 
 ## ORMs
 - https://github.com/diesel-rs/diesel
@@ -27,3 +26,4 @@ cargo run
 
 ## Resources
 - https://www.techempower.com/benchmarks/
+- https://github.com/flosse/rust-web-framework-comparison
