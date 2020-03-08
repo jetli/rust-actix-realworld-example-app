@@ -8,3 +8,5 @@ edition = "2018"
 
 [dependencies]
 conduit-primitives = { path = "../conduit-primitives", version = "0.1.0" }
+diesel = { version = "1.4", features = ["mysql"] }
+dotenv = "0.15.0"
