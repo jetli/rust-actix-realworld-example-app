@@ -1,0 +1,12 @@
+-- Your SQL goes here
+CREATE TABLE conduit_users (
+    id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    bio VARCHAR(2048),
+    image VARCHAR(2048),
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE KEY (username, email)
+)
