@@ -1,0 +1,1 @@
+ALTER TABLE `conduit_users` ADD COLUMN `salt` varchar(255) NOT NULL;
