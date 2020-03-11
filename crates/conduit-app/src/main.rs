@@ -35,7 +35,14 @@ cfg_if! {
     }
 }
 
+cfg_if! {
+    if #[cfg(feature = "diesel")] {
+        use conduit_diesel::users::repos::UsersRepo;
+    }
+}
+
 #[runtime]
 async fn main() -> std::io::Result<()> {
-    start_app().await
+    let repo = UsersRepo {};
+    start_app(repo).await
 }
