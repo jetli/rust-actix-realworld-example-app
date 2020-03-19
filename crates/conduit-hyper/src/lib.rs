@@ -8,7 +8,7 @@ async fn index(_req: Request<Body>) -> Result<Response<Body>, Infallible> {
 }
 
 pub async fn start_app(repo: impl UsersRepo) -> std::io::Result<()> {
-    let user = repo.get_by_id(123).await.unwrap();
+    let user = repo.get_by_id(1).await;
     println!("user: {:?}", user);
 
     let make_svc = make_service_fn(|_conn| async { Ok::<_, Infallible>(service_fn(index)) });
