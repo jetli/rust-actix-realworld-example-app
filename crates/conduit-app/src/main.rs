@@ -43,6 +43,8 @@ cfg_if! {
 
 #[runtime]
 async fn main() -> std::io::Result<()> {
-    let repo = UsersRepo {};
+    dotenv::dotenv().ok();
+
+    let repo = UsersRepo::new();
     start_app(repo).await
 }
