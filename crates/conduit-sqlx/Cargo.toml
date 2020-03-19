@@ -8,3 +8,12 @@ edition = "2018"
 
 [dependencies]
 conduit-primitives = { path = "../conduit-primitives", version = "0.1.0" }
+
+anyhow = "1.0"
+async-std = { version = "1.5" }
+async-trait = "0.1.24"
+chrono = { version = "0.4", features = ["serde"] }
+dotenv = "0.15"
+r2d2 = "0.8"
+serde = { version = "1", features = ["derive"] }
+sqlx = { version = "0.2.6", features = ["mysql", "chrono"] }

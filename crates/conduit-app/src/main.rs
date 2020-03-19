@@ -41,6 +41,12 @@ cfg_if! {
     }
 }
 
+cfg_if! {
+    if #[cfg(feature = "sqlx")] {
+        use conduit_sqlx::users::repos::UsersRepo;
+    }
+}
+
 #[runtime]
 async fn main() -> std::io::Result<()> {
     dotenv::dotenv().ok();
