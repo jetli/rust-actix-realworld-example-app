@@ -12,5 +12,4 @@ pub struct User {
     pub image: Option<String>,
     pub created_at: NaiveDateTime,
     pub updated_at: NaiveDateTime,
-    pub salt: String,
 }
